@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body
+        {
+            height: 100vh;
+            background-color: #0000ebfa;
+            background-size: fixed;
+            background-repeat: no-repeat;
+        }
+        .bubbles span
+        {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: aqua;
+            box-shadow: 0 0 15px aqua,0 0 15px aqua, 0 0 15px aqua,0 0 15px aqua;
+            margin: 30px;
+            position: relative;
+
+           transform: translateY(0vh);
+           animation-name: anim;
+           animation-duration: calc(1000s/var(--i));
+           animation-iteration-count: infinite;
+        }
+        .bubbles span:nth-child(even)
+        {
+            background-color: blue;
+            box-shadow: 0 0 15px aqua,0 0 15px blue, 0 0 15px blue,0 0 15px blue;
+        }
+      
+
+        @keyframes anim
+        {
+            0%
+            {
+                transform: translateY(100vh) scale(0);
+            }
+            100%
+            {
+                transform: translateY(-10vh) scale(1);
+
+            }
+        }
+        .main
+        {
+            position: relative;
+        }
+        .container
+        {
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+        h1
+        {
+            padding: 0;
+            margin: 0;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="bubbles">
+        <span style="--i:30"></span>
+        <span style="--i:12"></span>
+        <span style="--i:11"></span>
+        <span style="--i:30"></span>
+        <span style="--i:13"></span>
+        <span style="--i:16"></span>
+        <span style="--i:31"></span>
+        <span style="--i:15"></span>
+        <span style="--i:12"></span>
+        <span style="--i:9"></span>
+        <span style="--i:22"></span>
+        <span style="--i:17"></span>
+        <span style="--i:17"></span>
+        <span style="--i:19"></span>
+        <span style="--i:10"></span>
+        <span style="--i:31"></span>
+        <span style="--i:16"></span>
+        <span style="--i:20"></span>
+    </div>
+    <div class="container">
+        <h1>Subrahmanya </h1>
+    </div>
+</div>
+    
+</body>
+</html>
